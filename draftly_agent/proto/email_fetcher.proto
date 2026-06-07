@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package emailfetcher;
+
+service EmailFetcherService {
+  // Fetch up to `limit` emails belonging to a thread for a given user
+  rpc GetThreadEmails (ThreadRequest) returns (ThreadEmailsResponse);
+}
+
+message ThreadRequest {
+  string thread_id = 1;
+  string user_id   = 2;
+  int32  limit     = 3;   // max emails to return
+}
+
+message Email {
+  string id        = 1;
+  string from      = 2;
+  string subject   = 3;
+  string body      = 4;
+  string timestamp = 5;
+}
+
+message ThreadEmailsResponse {
+  repeated Email emails = 1;
+  string         error  = 2;   // non-empty when the server reports an error
+}

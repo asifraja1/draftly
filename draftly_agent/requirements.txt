@@ -1,0 +1,13 @@
+openai
+chromadb
+numpy
+python-dotenv
+langchain==0.3
+langchain-openai
+langchain-community
+langgraph
+psycopg2-binary
+confluent-kafka
+grpcio
+grpcio-tools
+langgraph-checkpoint-postgres
