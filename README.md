@@ -289,3 +289,9 @@ CHROMA_PATH=./chroma_db
 | Composite unique key on Relation | Two users can have the same contact email without conflict |
 | `@Async` on Kafka publish | Never blocks the HTTP response thread |
 | historyId always advanced | Prevents replay of same webhook messages on failures |
+
+---
+
+## Demo
+
+Full end-to-end demo video included in project submission.
